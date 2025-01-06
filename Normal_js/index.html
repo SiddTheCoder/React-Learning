@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrementor-Decrementor</title>
+</head>
+<body>
+    <button id="value">0</button>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+
+    <div id="errorMessage"></div>
+
+    <script>
+        const value = document.getElementById('value')
+        const increment = document.getElementById('increment')
+        const decrement = document.getElementById('decrement')
+ 
+        let generatedValue = 0
+        increment.addEventListener('click', () => {
+            generatedValue += 1
+            value.textContent = generatedValue
+        })
+        decrement.addEventListener('click', () => {
+            generatedValue -= 1
+            if(generatedValue < 0){
+               generatedValue += 1
+            } 
+            else{
+                value.textContent = generatedValue
+            }
+        })
+    </script>
+</body>
+</html>

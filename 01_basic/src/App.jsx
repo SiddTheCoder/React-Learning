@@ -1,10 +1,13 @@
+import Trash from "./Trash"
 
 function App() {
 
   return (
-   <h1
-    
-   >Hello World</h1>
+
+   <>
+   <Trash />
+   <h1>Hello World</h1>
+   </>
    
   )
 }
